@@ -6,8 +6,12 @@
 /cmake-*/
 /modules/
 /run-php/
-/tests/*
-!/tests/*.phpt
+/tests/*/*.diff
+/tests/*/*.exp
+/tests/*/*.log
+/tests/*/*.out
+/tests/*/*.php
+/tests/*/*.sh
 
 .deps
 acinclude.m4
@@ -32,6 +36,17 @@ missing
 mkinstalldirs
 php_test_results_*.txt
 run-tests.php
-*~
+tmp-php.ini
+
+*.cbp
+*.dep
 *.la
 *.lo
+*.opensdf
+*.sdf
+*.sln
+*.swp
+*.v11.suo
+*.vcxproj
+*.vcxproj.filters
+*~
