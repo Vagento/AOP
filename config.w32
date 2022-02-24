@@ -1,0 +1,9 @@
+// $Id$
+
+ARG_ENABLE("aop", "enable AOP", "no");
+
+if (PHP_AOP != "no") {
+    EXTENSION("aop", "aop.c");
+    AC_DEFINE("HAVE_AOP", 1, "whether AOP is enabled");
+    PHP_INSTALL_HEADERS("ext/aop/", "php_aop.h");
+}
