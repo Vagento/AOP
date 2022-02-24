@@ -1,9 +1,12 @@
 cmake_minimum_required(VERSION 3.8)
-project(aop C)
+project(aop CXX)
 
 add_compile_definitions(HAVE_AOP)
 
-set(SOURCE_FILES php_aop aop.c)
+set(SOURCE_FILES
+    aop.cpp
+    php_aop
+)
 
 execute_process(
     COMMAND php-config --include-dir

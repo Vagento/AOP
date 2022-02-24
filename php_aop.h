@@ -1,6 +1,6 @@
 /*
   +----------------------------------------------------------------------+
-  | Skeleton PHP extension                                               |
+  | AOP PHP extension                                                    |
   +----------------------------------------------------------------------+
   | Copyright (c) 2022 Valentin Wotschel                                 |
   +----------------------------------------------------------------------+
@@ -28,11 +28,20 @@
   +----------------------------------------------------------------------+
 */
 
+// Suppress warnings
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "OCUnusedMacroInspection"
+
 #ifndef PHP_AOP_H
 #define PHP_AOP_H 1
 
 #define PHP_AOP_VERSION "0.0.1"
 #define PHP_AOP_EXTNAME "aop"
+#define PHP_AOP_AUTHOR "Valentin Wotschel"
+#define PHP_AOP_COPYRIGHT "Copyright (c) 2022 Valentin Wotschel"
+#define PHP_AOP_COPYRIGHT_SHORT "Copyright (c) 2022"
+#define PHP_AOP_URL "https://github.com/WalterWoshid/AOP"
+#define PHP_AOP_URL_FAQ "https://github.com/WalterWoshid/AOP/wiki"
 
 #ifdef PHP_WIN32
 # define PHP_AOP_API __declspec(dllexport)
@@ -42,9 +51,14 @@
 # define PHP_AOP_API
 #endif
 
+#ifdef ZTS
+# include <TSRM.h>
+#endif
+
 // Declare all functions and classes of the extension
-static PHP_FUNCTION(aop_nop);
+// static PHP_FUNCTION(aop_nop);
 
 extern zend_module_entry aop_module_entry;
+#define phpext_aop_ptr &aop_module_entry
 
-#endif
+#endif // PHP_AOP_H
