@@ -1,6 +1,8 @@
 # PHP AOP Extension
 Aspect-Oriented Programming for PHP
 
+# THIS PROJECT IS CURRENTLY WIP AND NOT TO BE USED FOR PRODUCTION
+
 ## Introduction
 Aspect-Oriented Programming (AOP) is a software development technique that allows for the addition of code to a 
 program at runtime.
